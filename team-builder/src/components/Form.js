@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-
-const TeamForm = props => {
- 
+const TeamForm = props => { 
   const [team, setTeam] = useState({
     name: "",
-    email:""    
+    email:"",
+    role:"",    
   });
 
   //onChange handler to control inputs
@@ -18,7 +17,7 @@ const TeamForm = props => {
   const submitForm = e => {
     e.preventDefault();
     props.addNewTeam(team);
-    setTeam({ name: "" , email: "" });
+    setTeam({ name: "" , email: "", role:'' });
   };
 
   return (
@@ -41,6 +40,15 @@ const TeamForm = props => {
         onChange={handleChanges}
         placeholder="Email..."
         value={team.email}
+      />
+      <label htmlFor="role">Role</label>
+      <input
+        id="role"
+        type="text"
+        name="role"
+        onChange={handleChanges}
+        placeholder="Role..."
+        value={team.role}
       />
       
       <button type="submit">Add Team Members</button>

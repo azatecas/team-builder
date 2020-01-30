@@ -17,8 +17,9 @@ function App() {
     const newTeam = {
       //we need a unique id, we will use Date.now() JS method
       id: Date.now(),
-      title: param.name,
-      body: param.email
+      name: param.name,
+      email: param.email,
+      role: param.role
     };
     setTeam([...team, newTeam]);
   };
