@@ -6,7 +6,7 @@ const Team = props => {
       <div >
         {props.team.map(team => (
           <div key={team.id}>
-            <h2>{team.title}</h2>            
+            <h2>{team.name}</h2>            
           </div>
         ))}
       </div>

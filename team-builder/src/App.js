@@ -8,7 +8,7 @@ function App() {
   const [team, setTeam] = useState([
     {
       id: 1,
-      title: "test",
+      name: "test",
       email: 'email'      
     }
   ]);
@@ -17,8 +17,8 @@ function App() {
     const newTeam = {
       //we need a unique id, we will use Date.now() JS method
       id: Date.now(),
-      title: param.title,
-      body: param.body
+      title: param.name,
+      body: param.email
     };
     setTeam([...team, newTeam]);
   };
